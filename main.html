@@ -51,7 +51,9 @@
                             <div class="et-l et-l--post">
 
                                 <div class="et_builder_inner_content et_pb_gutters3">
-
+                                    <div id="" class="et_pb_section et_pb_section_1 et_section_regular iframe">
+                                        <iframe src='https://my.spline.design/untitled-8de0be58b22d821abfeb637ed59e6875/' frameborder='0' width='100%' height='100%'></iframe>
+                                    </div> <!-- .et_pb_section -->
                                     <div id="mision" class="et_pb_section et_pb_section_1 et_section_regular">
 
                                         <div class="et_pb_row et_pb_row_1">
@@ -504,43 +506,17 @@
         const toggle = document.getElementById('toggle');
         const header = document.getElementById('header');
         const navbar = document.getElementById('navbar');
-        const cart = document.getElementById('cart');
-        const icon = document.querySelector('.icon')
-        const search = document.querySelector('.search')
-        search.onclick = function(){
-            search.classList.toggle('active');
-        }
+
         document.onclick = function(e){
-            if (e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar' && e.target.id !== 'cart'){
+            if (e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar'){
                 toggle.classList.remove('active');
                 navbar.classList.remove('active');
-            }
-            else 
-                if (e.target.id !== 'icon' || e.target.id !== 'search')
-                {
-                    search.classList.remove('active');
-                }
-            if(e.target.id == 'search')
-                {
-                    search.classList.toggle('active');
-                }
-            else 
-                if(e.target.id == 'icon')
-                {
-                    search.classList.toggle('active');
-                }
-            if(e.target.id == 'search')
-            {
-                search.classList.toggle('active');
             }
         }
 
         toggle.onclick = function(){
             toggle.classList.toggle('active');
             navbar.classList.toggle('active');
-        }
-        cart.onclick = function(){
-            cart.classList.toggle('active');
         }
     </script>
 

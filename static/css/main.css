@@ -8,8 +8,9 @@ body.custom-background {
 }
 
 header
-{
-    position: fixed;
+{   
+    position: relative;
+    height: 50px;
     top: 0;
     right: 0;
     display: flex;
@@ -48,6 +49,8 @@ header a img
     z-index: 10009;
 }
 
+
+
 #toggle::before
 {
     content: '';
@@ -71,7 +74,12 @@ header a img
 
 }
 
-
+.iframe
+{
+    min-width: 100%;
+    width: 100vh;
+    height: 100vh;
+}
 
 #toggle.active::before
 {
@@ -91,6 +99,7 @@ header a img
     transition: 0.75s;
     z-index: 10009;
 }
+
 
 #navbar
 {
@@ -145,13 +154,14 @@ header a img
 {   
     header
     {
-        position: fixed;
+        position: relative;
         flex-direction: column;
         width: 100%;
         top: 0px;
         padding: 0px;
         right: 0%;
         left: 0;
+        height: 50px;
         justify-content: space-between;
         z-index: 100009;
     }
