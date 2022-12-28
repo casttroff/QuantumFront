@@ -27,11 +27,8 @@
         <a href="/home" class="logo"><img src="/static/img/logo.png" alt=""></a>
         <div id="navbar">
             <ul>
-                <li><a href="/home" class="">Inicio</a></li>
-                <li><a href="/productos">Productos</a></li>
-                <li><a href="/productos">Información</a></li>
-                <li><a href="/login" class="cuenta">Mi cuenta</a></li>
-                <li><a href="/logout" class="cuenta">Cerrar sesión</a></li>
+                <li><a href="/home">Objetivo</a></li>
+                <li><a href="/home">Contacto</a></li>
             </ul>
         </div>
         <div id="toggle"></div>
@@ -51,6 +48,9 @@
                             <div class="et-l et-l--post">
 
                                 <div class="et_builder_inner_content et_pb_gutters3">
+                                    <div id="mision1" class="et_pb_section et_pb_section_1 et_section_regular iframe">
+                                        <iframe class="spline" src='https://my.spline.design/untitled-8de0be58b22d821abfeb637ed59e6875/' frameborder='0' width='100%' height='100%'></iframe>
+                                    </div> <!-- .et_pb_section -->
 
                                     <div id="mision" class="et_pb_section et_pb_section_1 et_section_regular">
 
@@ -157,10 +157,6 @@
                                                         <p style="text-align: left;"><strong>+ de 11,000</strong>
                                                             colaboradores
                                                             en<br />
-                                                            México<br />
-                                                            Colombia<br />
-                                                            Ecuador<br />
-                                                            Perú<br />
                                                             Brasil<br />
                                                             Argentina<br />
                                                             USA</p>
@@ -249,7 +245,6 @@
                                         </div> <!-- .et_pb_row -->
 
                                     </div> <!-- .et_pb_section -->
-
                                     <div id="alianzas"
                                         class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
 
@@ -369,7 +364,7 @@
                                     <div
                                         class="et_pb_module et_pb_code et_pb_code_0_tb_footer et_animated  et_pb_text_align_left">
 
-                                        <div class="et_pb_code_inner"><a href="" class="liga_subfooter">México</a>
+                                        <div class="et_pb_code_inner">
                                             <a href="" class="liga_subfooter">Argentina</a>
                                         </div>
                                     </div> <!-- .et_pb_code -->
@@ -504,34 +499,11 @@
         const toggle = document.getElementById('toggle');
         const header = document.getElementById('header');
         const navbar = document.getElementById('navbar');
-        const cart = document.getElementById('cart');
-        const icon = document.querySelector('.icon')
-        const search = document.querySelector('.search')
-        search.onclick = function(){
-            search.classList.toggle('active');
-        }
+
         document.onclick = function(e){
-            if (e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar' && e.target.id !== 'cart'){
+            if (e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar'){
                 toggle.classList.remove('active');
                 navbar.classList.remove('active');
-            }
-            else 
-                if (e.target.id !== 'icon' || e.target.id !== 'search')
-                {
-                    search.classList.remove('active');
-                }
-            if(e.target.id == 'search')
-                {
-                    search.classList.toggle('active');
-                }
-            else 
-                if(e.target.id == 'icon')
-                {
-                    search.classList.toggle('active');
-                }
-            if(e.target.id == 'search')
-            {
-                search.classList.toggle('active');
             }
         }
 
@@ -539,9 +511,7 @@
             toggle.classList.toggle('active');
             navbar.classList.toggle('active');
         }
-        cart.onclick = function(){
-            cart.classList.toggle('active');
-        }
+
     </script>
 
 </body>
