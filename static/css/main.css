@@ -149,7 +149,7 @@ button
     text-align: center;
     font-size: 1,4375;
     border: none;
-    margin-top: 45px;
+    margin-top: 25px;
 }
 button.boton
 {
@@ -378,7 +378,7 @@ iframe
     background: linear-gradient(0deg, transparent, #8c52ff, #8c52ff);
     transform-origin: bottom right;
     animation: animate 4s linear infinite;
-
+    z-index: 1;
 }
 
 .box::after
@@ -389,11 +389,46 @@ iframe
     left: -50%;
     width: 750px;
     height: 600;
-    background: linear-gradient(0deg, transparent, #8c52ff, #8c52ff);
+    background: linear-gradient(180deg, transparent, #8c52ff, #8c52ff);
     transform-origin: bottom right;
     animation: animate 4s linear infinite;
-    animation-delay: -3s;
-    z-index: -10;
+}
+
+.box2
+{
+    position: relative;
+    width: 750px;
+    height: 600px;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box2::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 750px;
+    height: 600px;
+    background: linear-gradient(180deg, transparent, #8c52ff, #8c52ff);
+    transform-origin: bottom right;
+    animation: animate2 4s linear infinite;
+
+}
+
+.box2::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 750px;
+    height: 600;
+    background: linear-gradient(0deg, transparent, #8c52ff, #8c52ff);
+    transform-origin: bottom right;
+    animation: animate2 4s linear infinite;
 }
 
 input
@@ -554,6 +589,7 @@ input
     display: flex;
     flex-direction: column;
     background: #000;
+    z-index: 1;
 }
 
 .form h2
@@ -587,14 +623,26 @@ input
     
 }
 
+@keyframes animate2
+{
+    0%
+    {
+        transform: rotate(180deg);
+    }
+    100%
+    {
+        transform: rotate(540deg);
+    }
+    
+}
 
 @media (max-width: 600px)
 {
     .box
     {
         position: relative;
-        width: 360px;
-        height: 520px;
+        width: 100%;
+        height: 540px;
         background-color: #000;
         border-radius: 8px;
         overflow: hidden;
@@ -606,11 +654,60 @@ input
         position: absolute;
         top: -50%;
         left: -50%;
-        width: 360px;
-        height: 520px;
+        width: 100%;
+        height: 540px;
         background: linear-gradient(0deg, transparent, #8c52ff, #8c52ff);
         transform-origin: bottom right;
-        animation: animate 6s linear infinite;
+        animation: animate 4s linear infinite;
+    }
+    .box::after
+    {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 100%;
+        height: 540px;
+        background: linear-gradient(180deg, transparent, #8c52ff, #8c52ff);
+        transform-origin: bottom right;
+        animation: animate 4s linear infinite;
+    }
+
+    .box2
+    {
+        position: relative;
+        width: 100%;
+        height: 540px;
+        background-color: #000;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .box2::before
+    {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 100%;
+        height: 540px;
+        background: linear-gradient(180deg, transparent, #8c52ff, #8c52ff);
+        transform-origin: bottom right;
+        animation: animate2 4s linear infinite;
+
+    }
+
+    .box2::after
+    {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 100%;
+        height: 540px;
+        background: linear-gradient(0deg, transparent, #8c52ff, #8c52ff);
+        transform-origin: bottom right;
+        animation: animate2 4s linear infinite;
     }
 }
 
