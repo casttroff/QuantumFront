@@ -21,6 +21,12 @@ body.custom-background {
     background-color: #000;
 }
 
+a {
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+}
+
 .contacto
 {
     background-color: transparent;
@@ -76,6 +82,16 @@ p
 
 }
 
+.footer_section
+{
+    padding: 20px 0 20px 6%!important;
+}
+
+.row_footer
+{
+   padding: 4% 6% 20px 6%!important;
+}
+
 .navbar
 {
     background: transparent;
@@ -117,6 +133,7 @@ p
     max-width: 1920px;
     margin: auto;
     position: relative;
+    padding: 4% 6% 6% 6%;
 }
 
 .et_pb_row_3 {
@@ -153,22 +170,32 @@ header a img
     z-index: 10009;
 }
 
-button
-{
+
+button {
     background: #13b5c1;
+    position: absolute;
+    bottom: 29px;
     border-radius: 7px;
     color: #fff;
     cursor: pointer;
     height: 43px;
     width: 170px;
     display: flex;
-    padding: 10px 52px;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
     letter-spacing: 0.1em;
     text-align: center;
-    font-size: 1,4375;
     border: none;
-    margin-top: 25px;
+    border-radius: 30px;
+    /* border-color: #13b5c1; */
+    border-width: 2px;
+}
+
+.container_button
+{
+    display: flex;
+    justify-content: center;
 }
 button.boton
 {
@@ -179,6 +206,8 @@ button.boton
     height: 43px;
     width: 170px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 20px;
     font-weight: bold;
     letter-spacing: 0.1em;
@@ -188,7 +217,7 @@ button.boton
 
 .boton
 {
-    background: #13b5c1;
+    background: #000;
     border-radius: 7px;
     color: #fff;
     cursor: pointer;
@@ -203,12 +232,15 @@ button.boton
     opacity: 0.8;
 }
 
-.boton a
-{
+.boton a {
     color: #fff;
     padding: 10px 28.4765px;
     cursor: pointer;
     font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    width: 170px;
+    background: #13b5c1;
 }
 
 .et_pb_module {
@@ -248,7 +280,7 @@ button.boton
 {
     position: absolute;
     bottom: 5px;
-    padding: 1% 0 0 59%;
+    padding: 1% 0 0 50%;
     left: 180px;
 }
 
@@ -280,7 +312,7 @@ button.boton
 {
     content: '';
     position: absolute;
-    width: 28px;
+    width: 20px;
     height: 2px;
     background: #fff;
     transform: translateY(-5px);
@@ -291,14 +323,32 @@ button.boton
 {
     content: '';
     position: absolute;
-    width: 28px;
+    width: 20px;
     height: 2px;
     background: #fff;
     transform: translateY(5px);
     transition: 0.2s;
 
 }
+#toggle.active::before
+{
+    transform: translateY(0px) rotate(45deg);
+    background: #8c52ff;
+}
+#toggle.active::after
+{
+    transform: translateY(0px) rotate(-45deg);
+    background: #8c52ff;
 
+}
+
+#toggle.active
+{
+    color: #8c52ff;
+    border-radius: 50%;
+    transition: 0.75s;
+    z-index: 10009;
+}
 .percent
 {
     margin-bottom: 0;
@@ -331,32 +381,13 @@ button.boton
     align-content: space-around;
     height: 65px;
 }
+
 .iframe
 {
     min-width: 100%;
     width: 100vh;
     height: 100vh;
 }
-
-#toggle.active::before
-{
-    transform: translateY(0px) rotate(45deg);
-}
-
-#toggle.active::after
-{
-    transform: translateY(0px) rotate(-45deg);
-
-}
-
-#toggle.active
-{
-    background: #8c52ff;
-    border-radius: 50%;
-    transition: 0.75s;
-    z-index: 10009;
-}
-
 
 #navbar
 {
@@ -444,7 +475,7 @@ iframe
 {
     position: relative;
     width: 750px;
-    height: 600px;
+    height: 520px;
     background-color: #000;
     border-radius: 8px;
     overflow: hidden;
@@ -458,7 +489,7 @@ iframe
     top: -50%;
     left: -50%;
     width: 750px;
-    height: 600px;
+    height: 520px;
     background: linear-gradient(0deg, transparent, #8c52ff, #8c52ff);
     transform-origin: bottom right;
     animation: animate 4s linear infinite;
@@ -472,7 +503,7 @@ iframe
     top: -50%;
     left: -50%;
     width: 750px;
-    height: 600;
+    height: 520px;
     background: linear-gradient(180deg, transparent, #8c52ff, #8c52ff);
     transform-origin: bottom right;
     animation: animate 4s linear infinite;
@@ -482,7 +513,7 @@ iframe
 {
     position: relative;
     width: 750px;
-    height: 600px;
+    height: 520px;
     background-color: #000;
     border-radius: 8px;
     overflow: hidden;
@@ -495,7 +526,7 @@ iframe
     top: -50%;
     left: -50%;
     width: 750px;
-    height: 600px;
+    height: 520px;
     background: linear-gradient(180deg, transparent, #8c52ff, #8c52ff);
     transform-origin: bottom right;
     animation: animate2 4s linear infinite;
@@ -509,7 +540,7 @@ iframe
     top: -50%;
     left: -50%;
     width: 750px;
-    height: 600;
+    height: 520px;
     background: linear-gradient(0deg, transparent, #8c52ff, #8c52ff);
     transform-origin: bottom right;
     animation: animate2 4s linear infinite;
@@ -518,6 +549,17 @@ iframe
 {
     left:25%;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px#8c52ff inset !important;
+    -webkit-transition: background-color 5000s ease-in-out 0s !important;
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+    -webkit-border-radius: 4px
+}
+
 input
 {
     color: #fff!important;
@@ -540,6 +582,7 @@ input
 {
     position: relative;
     width: 100%;
+    height: 44px;
     padding: 20px 10px 10px;
     background:transparent;
     border: none;
@@ -615,6 +658,10 @@ input
     outline: none;
 }
 
+.et_pb_text_inner h2
+{
+    color: #fff;
+}
 
 .inputBoxM span
 {
@@ -672,7 +719,7 @@ input
     inset: 3px;
     background: url(/static/img/pexels.jpg);
     border-radius: 8px;
-    padding: 50px 40px;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     background: #000;
@@ -741,7 +788,7 @@ input
         position: absolute;
         top: -50%;
         left: -50%;
-        width: 100%;
+        width: 100% ;
         height: 540px;
         background: linear-gradient(0deg, transparent, #8c52ff, #8c52ff);
         transform-origin: bottom right;
@@ -856,8 +903,7 @@ input
         width: calc(100%);
     }
 
-    #navbar
-    {   
+    #navbar {
         /* padding: 90px; */
         margin-top: 60px;
         position: fixed;
@@ -868,9 +914,10 @@ input
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #000;
+        background: #000000;
         z-index: 10002;
         transition: 0.2s;
+        opacity: 0.91;
     }
     #navbar.active
     {
@@ -1298,357 +1345,707 @@ body[data-scroll-step="51"] .et_pb_columna_6 {
 }
 
 /* Transition 1 y 2 */
-body[data-scroll-step="0"] .image_transition_1_2 {
+body[data-scroll-step="0"] .image_transition_2{
     opacity: 0.085!important;
     transform: translateX(65px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="1"] .image_transition_1_2 {
+body[data-scroll-step="1"] .image_transition_2{
     opacity: 0.095!important;
     transform: translateX(60px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="2"] .image_transition_1_2 {
+body[data-scroll-step="2"] .image_transition_2{
     opacity: 0.15!important;
     transform: translateX(55px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="3"] .image_transition_1_2 {
+body[data-scroll-step="3"] .image_transition_2{
     opacity: 0.165!important;
     transform: translateX(50px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="4"] .image_transition_1_2 {
+body[data-scroll-step="4"] .image_transition_2{
     opacity: 0.175!important;
     transform: translateX(45px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="5"] .image_transition_1_2 {
+body[data-scroll-step="5"] .image_transition_2{
     opacity: 0.185!important;
     transform: translateX(40px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="6"] .image_transition_1_2 {
+body[data-scroll-step="6"] .image_transition_2{
     opacity: 0.195!important;
     transform: translateX(35px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="7"] .image_transition_1_2 {
+body[data-scroll-step="7"] .image_transition_2{
     opacity: 0.205!important;
     transform: translateX(30px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="8"] .image_transition_1_2 {
+body[data-scroll-step="8"] .image_transition_2{
     opacity: 0.215!important;
     transform: translateX(25px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="9"] .image_transition_1_2 {
+body[data-scroll-step="9"] .image_transition_2{
     opacity: 0.25!important;
     transform: translateX(20px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="10"] .image_transition_1_2 {
+body[data-scroll-step="10"] .image_transition_2{
     opacity: 0.355!important;
     transform: translateX(15px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="11"] .image_transition_1_2 {
+body[data-scroll-step="11"] .image_transition_2{
     opacity: 0.455!important;
     transform: translateX(10px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="12"] .image_transition_1_2 {
+body[data-scroll-step="12"] .image_transition_2{
     opacity: 0.655!important;
     transform: translateX(5px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="13"] .image_transition_1_2 {
+body[data-scroll-step="13"] .image_transition_2{
     opacity: 0.755!important;
     transform: translateX(2px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="14"] .image_transition_1_2 {
+body[data-scroll-step="14"] .image_transition_2{
     opacity: 0.833 !important;
     transform: translateX(1px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="15"] .image_transition_1_2 {
+body[data-scroll-step="15"] .image_transition_2{
     opacity: 0.9 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="16"] .image_transition_1_2 {
+body[data-scroll-step="16"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="17"] .image_transition_1_2 {
+body[data-scroll-step="17"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="18"] .image_transition_1_2 {
+body[data-scroll-step="18"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="19"] .image_transition_1_2 {
+body[data-scroll-step="19"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="20"] .image_transition_1_2 {
+body[data-scroll-step="20"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="21"] .image_transition_1_2 {
+body[data-scroll-step="21"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="22"] .image_transition_1_2 {
+body[data-scroll-step="22"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="23"] .image_transition_1_2 {
+body[data-scroll-step="23"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="24"] .image_transition_1_2 {
+body[data-scroll-step="24"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="25"] .image_transition_1_2 {
+body[data-scroll-step="25"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="26"] .image_transition_1_2 {
+body[data-scroll-step="26"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="27"] .image_transition_1_2 {
+body[data-scroll-step="27"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="28"] .image_transition_1_2 {
+body[data-scroll-step="28"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="29"] .image_transition_1_2 {
+body[data-scroll-step="29"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="30"] .image_transition_1_2 {
+body[data-scroll-step="30"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="31"] .image_transition_1_2 {
+body[data-scroll-step="31"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="32"] .image_transition_1_2 {
+body[data-scroll-step="32"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="33"] .image_transition_1_2 {
+body[data-scroll-step="33"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="34"] .image_transition_1_2 {
+body[data-scroll-step="34"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="35"] .image_transition_1_2 {
+body[data-scroll-step="35"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="36"] .image_transition_1_2 {
+body[data-scroll-step="36"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="37"] .image_transition_1_2 {
+body[data-scroll-step="37"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="38"] .image_transition_1_2 {
+body[data-scroll-step="38"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="39"] .image_transition_1_2 {
+body[data-scroll-step="39"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="40"] .image_transition_1_2 {
+body[data-scroll-step="40"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="41"] .image_transition_1_2 {
+body[data-scroll-step="41"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="42"] .image_transition_1_2 {
+body[data-scroll-step="42"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="43"] .image_transition_1_2 {
+body[data-scroll-step="43"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="44"] .image_transition_1_2 {
+body[data-scroll-step="44"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="45"] .image_transition_1_2 {
+body[data-scroll-step="45"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="46"] .image_transition_1_2 {
+body[data-scroll-step="46"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="47"] .image_transition_1_2 {
+body[data-scroll-step="47"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="48"] .image_transition_1_2 {
+body[data-scroll-step="48"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="49"] .image_transition_1_2 {
+body[data-scroll-step="49"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="50"] .image_transition_1_2 {
+body[data-scroll-step="50"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="51"] .image_transition_1_2 {
+body[data-scroll-step="51"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="52"] .image_transition_1_2 {
+body[data-scroll-step="52"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="53"] .image_transition_1_2 {
+body[data-scroll-step="53"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="54"] .image_transition_1_2 {
+body[data-scroll-step="54"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="55"] .image_transition_1_2 {
+body[data-scroll-step="55"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="56"] .image_transition_1_2 {
+body[data-scroll-step="56"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="57"] .image_transition_1_2 {
+body[data-scroll-step="57"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="58"] .image_transition_1_2 {
+body[data-scroll-step="58"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="59"] .image_transition_1_2 {
+body[data-scroll-step="59"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="60"] .image_transition_1_2 {
+body[data-scroll-step="60"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="61"] .image_transition_1_2 {
+body[data-scroll-step="61"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="62"] .image_transition_1_2 {
+body[data-scroll-step="62"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="63"] .image_transition_1_2 {
+body[data-scroll-step="63"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="64"] .image_transition_1_2 {
+body[data-scroll-step="64"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="65"] .image_transition_1_2 {
+body[data-scroll-step="65"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="66"] .image_transition_1_2 {
+body[data-scroll-step="66"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="67"] .image_transition_1_2 {
+body[data-scroll-step="67"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="68"] .image_transition_1_2 {
+body[data-scroll-step="68"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
-body[data-scroll-step="69"] .image_transition_1_2 {
+body[data-scroll-step="69"] .image_transition_2{
     opacity: 1 !important;
     transform: translateX(0px);
     transition: opacity 200ms linear, transform 200ms linear;
 }
 
+body[data-scroll-step="0"] .image_transition_1{
+    opacity: 0.085!important;
+    transform: translateX(-65px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="1"] .image_transition_1{
+    opacity: 0.095!important;
+    transform: translateX(-60px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="2"] .image_transition_1{
+    opacity: 0.15!important;
+    transform: translateX(-55px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="3"] .image_transition_1{
+    opacity: 0.165!important;
+    transform: translateX(-50px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="4"] .image_transition_1{
+    opacity: 0.175!important;
+    transform: translateX(-45px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="5"] .image_transition_1{
+    opacity: 0.185!important;
+    transform: translateX(-40px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="6"] .image_transition_1{
+    opacity: 0.195!important;
+    transform: translateX(-35px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="7"] .image_transition_1{
+    opacity: 0.205!important;
+    transform: translateX(-30px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="8"] .image_transition_1{
+    opacity: 0.215!important;
+    transform: translateX(-25px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="9"] .image_transition_1{
+    opacity: 0.25!important;
+    transform: translateX(-20px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="10"] .image_transition_1{
+    opacity: 0.355!important;
+    transform: translateX(-15px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="11"] .image_transition_1{
+    opacity: 0.455!important;
+    transform: translateX(-10px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="12"] .image_transition_1{
+    opacity: 0.655!important;
+    transform: translateX(-5px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="13"] .image_transition_1{
+    opacity: 0.755!important;
+    transform: translateX(-2px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="14"] .image_transition_1{
+    opacity: 0.833 !important;
+    transform: translateX(-1px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="15"] .image_transition_1{
+    opacity: 0.9 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="16"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="17"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="18"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="19"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="20"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="21"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="22"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="23"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="24"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="25"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="26"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="27"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="28"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="29"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="30"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="31"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="32"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="33"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="34"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="35"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="36"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="37"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="38"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="39"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="40"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="41"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="42"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="43"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="44"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="45"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="46"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="47"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="48"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="49"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="50"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="51"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="52"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="53"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="54"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="55"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="56"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="57"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="58"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="59"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="60"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="61"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="62"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="63"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="64"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="65"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="66"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="67"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="68"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
+body[data-scroll-step="69"] .image_transition_1{
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: opacity 200ms linear, transform 200ms linear;
+}
 @media(max-width:900px)
 {
     body[data-scroll-step="28"] .et_pb_columna_5 {
@@ -1824,135 +2221,572 @@ body[data-scroll-step="69"] .image_transition_1_2 {
         transition: transform 200ms linear;
     }
     body[data-scroll-step="71"] .et_pb_columna_5 {
-        transform: translateX(0);
-        transition: transform 200ms linear;
-    }
-    body[data-scroll-step="72"] .et_pb_columna_5 {
-        transform: translateX(0);
-        transition: transform 200ms linear;
-    }
-    body[data-scroll-step="73"] .et_pb_columna_5 {
-        transform: translateX(0);
-        transition: transform 200ms linear;
-    }
-    body[data-scroll-step="74"] .et_pb_columna_5 {
-        transform: translateX(0);
-        transition: transform 200ms linear;
-    }
-    body[data-scroll-step="75"] .et_pb_columna_5 {
-        transform: translateX(0);
-        transition: transform 200ms linear;
-    }
-    body[data-scroll-step="76"] .et_pb_columna_5 {
-        transform: translateX(0);
-        transition: transform 200ms linear;
-    }
-    body[data-scroll-step="77"] .et_pb_columna_5 {
         transform: translateX(-1%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="78"] .et_pb_columna_5 {
+    body[data-scroll-step="72"] .et_pb_columna_5 {
         transform: translateX(-4%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="79"] .et_pb_columna_5 {
+    body[data-scroll-step="73"] .et_pb_columna_5 {
         transform: translateX(-7%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="80"] .et_pb_columna_5 {
+    body[data-scroll-step="74"] .et_pb_columna_5 {
         transform: translateX(-10%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="81"] .et_pb_columna_5 {
+    body[data-scroll-step="75"] .et_pb_columna_5 {
         transform: translateX(-13%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="82"] .et_pb_columna_5 {
+    body[data-scroll-step="76"] .et_pb_columna_5 {
         transform: translateX(-16%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="83"] .et_pb_columna_5 {
+    body[data-scroll-step="77"] .et_pb_columna_5 {
         transform: translateX(-19%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="84"] .et_pb_columna_5 {
+    body[data-scroll-step="78"] .et_pb_columna_5 {
         transform: translateX(-21%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="85"] .et_pb_columna_5 {
+    body[data-scroll-step="79"] .et_pb_columna_5 {
         transform: translateX(-24%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="86"] .et_pb_columna_5 {
+    body[data-scroll-step="80"] .et_pb_columna_5 {
         transform: translateX(-27%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="87"] .et_pb_columna_5 {
+    body[data-scroll-step="81"] .et_pb_columna_5 {
         transform: translateX(-30%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="88"] .et_pb_columna_5 {
+    body[data-scroll-step="82"] .et_pb_columna_5 {
         transform: translateX(-33%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="89"] .et_pb_columna_5 {
+    body[data-scroll-step="83"] .et_pb_columna_5 {
         transform: translateX(-36%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="90"] .et_pb_columna_5 {
+    body[data-scroll-step="84"] .et_pb_columna_5 {
         transform: translateX(-39%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="91"] .et_pb_columna_5 {
+    body[data-scroll-step="85"] .et_pb_columna_5 {
         transform: translateX(-42%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="92"] .et_pb_columna_5 {
+    body[data-scroll-step="86"] .et_pb_columna_5 {
         transform: translateX(-45%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="93"] .et_pb_columna_5 {
+    body[data-scroll-step="87"] .et_pb_columna_5 {
         transform: translateX(-48%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="94"] .et_pb_columna_5 {
+    body[data-scroll-step="88"] .et_pb_columna_5 {
         transform: translateX(-51%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="95"] .et_pb_columna_5 {
+    body[data-scroll-step="89"] .et_pb_columna_5 {
         transform: translateX(-54%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="96"] .et_pb_columna_5 {
+    body[data-scroll-step="90"] .et_pb_columna_5 {
         transform: translateX(-57%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="97"] .et_pb_columna_5 {
+    body[data-scroll-step="91"] .et_pb_columna_5 {
         transform: translateX(-60%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="98"] .et_pb_columna_5 {
+    body[data-scroll-step="92"] .et_pb_columna_5 {
         transform: translateX(-63%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="99"] .et_pb_columna_5 {
+    body[data-scroll-step="93"] .et_pb_columna_5 {
         transform: translateX(-66%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="100"] .et_pb_columna_5 {
+    body[data-scroll-step="94"] .et_pb_columna_5 {
         transform: translateX(-69%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="101"] .et_pb_columna_5 {
+    body[data-scroll-step="95"] .et_pb_columna_5 {
         transform: translateX(-72%);
         transition: transform 200ms linear;
     }
-    body[data-scroll-step="102"] .et_pb_columna_5 {
+    body[data-scroll-step="96"] .et_pb_columna_5 {
         transform: translateX(-75%);
         transition: transform 200ms linear;
     }
+    /* Image 1 transition inverted */
+    body[data-scroll-step="53"] .image_transition_1{
+        opacity: 0.085!important;
+        transform: translateX(65px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="52"] .image_transition_1{
+        opacity: 0.095!important;
+        transform: translateX(60px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="51"] .image_transition_1{
+        opacity: 0.15!important;
+        transform: translateX(55px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="50"] .image_transition_1{
+        opacity: 0.165!important;
+        transform: translateX(50px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="49"] .image_transition_1{
+        opacity: 0.175!important;
+        transform: translateX(45px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="48"] .image_transition_1{
+        opacity: 0.185!important;
+        transform: translateX(40px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="47"] .image_transition_1{
+        opacity: 0.195!important;
+        transform: translateX(35px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="46"] .image_transition_1{
+        opacity: 0.205!important;
+        transform: translateX(30px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="45"] .image_transition_1{
+        opacity: 0.215!important;
+        transform: translateX(25px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="44"] .image_transition_1{
+        opacity: 0.25!important;
+        transform: translateX(20px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="43"] .image_transition_1{
+        opacity: 0.355!important;
+        transform: translateX(15px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="42"] .image_transition_1{
+        opacity: 0.455!important;
+        transform: translateX(10px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="41"] .image_transition_1{
+        opacity: 0.655!important;
+        transform: translateX(5px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="40"] .image_transition_1{
+        opacity: 0.755!important;
+        transform: translateX(3px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="39"] .image_transition_1{
+        opacity: 0.833 !important;
+        transform: translateX(2px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="38"] .image_transition_1{
+        opacity: 0.9 !important;
+        transform: translateX(1px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="37"] .image_transition_1{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    /* Image 2 transition inverted */
+    body[data-scroll-step="68"] .image_transition_2{
+        opacity: 0.085!important;
+        transform: translateX(-65px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="67"] .image_transition_2{
+        opacity: 0.095!important;
+        transform: translateX(-60px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="66"] .image_transition_2{
+        opacity: 0.15!important;
+        transform: translateX(-55px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="65"] .image_transition_2{
+        opacity: 0.165!important;
+        transform: translateX(-50px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="64"] .image_transition_2{
+        opacity: 0.175!important;
+        transform: translateX(-45px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="63"] .image_transition_2{
+        opacity: 0.185!important;
+        transform: translateX(-40px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="62"] .image_transition_2{
+        opacity: 0.195!important;
+        transform: translateX(-35px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="61"] .image_transition_2{
+        opacity: 0.205!important;
+        transform: translateX(-30px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="60"] .image_transition_2{
+        opacity: 0.215!important;
+        transform: translateX(-25px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="59"] .image_transition_2{
+        opacity: 0.25!important;
+        transform: translateX(-20px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="58"] .image_transition_2{
+        opacity: 0.355!important;
+        transform: translateX(-15px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="57"] .image_transition_2{
+        opacity: 0.455!important;
+        transform: translateX(-10px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="56"] .image_transition_2{
+        opacity: 0.655!important;
+        transform: translateX(-5px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="55"] .image_transition_2{
+        opacity: 0.755!important;
+        transform: translateX(-2px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="54"] .image_transition_2{
+        opacity: 0.833 !important;
+        transform: translateX(-1px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="53"] .image_transition_2{
+        opacity: 0.9 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="52"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
 
+    /* Image 1 y 2 transition X */
+    body[data-scroll-step="18"] .image_transition_2{
+        opacity: 0.080!important;
+        transform: translateX(75px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="19"] .image_transition_2{
+        opacity: 0.082!important;
+        transform: translateX(70px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="20"] .image_transition_2{
+        opacity: 0.085!important;
+        transform: translateX(65px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="21"] .image_transition_2{
+        opacity: 0.095!important;
+        transform: translateX(60px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="22"] .image_transition_2{
+        opacity: 0.15!important;
+        transform: translateX(55px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="23"] .image_transition_2{
+        opacity: 0.165!important;
+        transform: translateX(50px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="24"] .image_transition_2{
+        opacity: 0.175!important;
+        transform: translateX(45px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="25"] .image_transition_2{
+        opacity: 0.185!important;
+        transform: translateX(40px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="26"] .image_transition_2{
+        opacity: 0.195!important;
+        transform: translateX(35px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="27"] .image_transition_2{
+        opacity: 0.205!important;
+        transform: translateX(30px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="28"] .image_transition_2{
+        opacity: 0.215!important;
+        transform: translateX(25px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="29"] .image_transition_2{
+        opacity: 0.25!important;
+        transform: translateX(20px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="30"] .image_transition_2{
+        opacity: 0.355!important;
+        transform: translateX(15px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="31"] .image_transition_2{
+        opacity: 0.455!important;
+        transform: translateX(10px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="32"] .image_transition_2{
+        opacity: 0.655!important;
+        transform: translateX(5px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="33"] .image_transition_2{
+        opacity: 0.755!important;
+        transform: translateX(2px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="34"] .image_transition_2{
+        opacity: 0.833 !important;
+        transform: translateX(1px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="35"] .image_transition_2{
+        opacity: 0.9 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="36"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="37"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="38"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="39"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="40"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="41"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="42"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="43"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="44"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="45"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="46"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="47"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="48"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="49"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="50"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    body[data-scroll-step="51"] .image_transition_2{
+        opacity: 1 !important;
+        transform: translateX(0px);
+        transition: opacity 200ms linear, transform 200ms linear;
+    }
+    
+    body[data-scroll-step="33"] .et_pb_columna_5 {
+        transform: translateX(-100%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="34"] .et_pb_columna_5 {
+        transform: translateX(-95%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="35"] .et_pb_columna_5 {
+        transform: translateX(-90%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="36"] .et_pb_columna_5 {
+        transform: translateX(-85%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="37"] .et_pb_columna_5 {
+        transform: translateX(-80%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="38"] .et_pb_columna_5 {
+        transform: translateX(-75%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="39"] .et_pb_columna_5 {
+        transform: translateX(-70%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="40"] .et_pb_columna_5 {
+        transform: translateX(-65%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="41"] .et_pb_columna_5 {
+        transform: translateX(-60%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="42"] .et_pb_columna_5 {
+        transform: translateX(-55%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="43"] .et_pb_columna_5 {
+        transform: translateX(-50%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="44"] .et_pb_columna_5 {
+        transform: translateX(-45%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="45"] .et_pb_columna_5 {
+        transform: translateX(-40%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="46"] .et_pb_columna_5 {
+        transform: translateX(-35%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="47"] .et_pb_columna_5 {
+        transform: translateX(-30%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="48"] .et_pb_columna_5 {
+        transform: translateX(-25%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="49"] .et_pb_columna_5 {
+        transform: translateX(-20%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="50"] .et_pb_columna_5 {
+        transform: translateX(-15%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="51"] .et_pb_columna_5 {
+        transform: translateX(-10%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="52"] .et_pb_columna_5 {
+        transform: translateX(-5%);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="53"] .et_pb_columna_5 {
+        transform: translateX(0);
+        transition: transform 200ms linear;
+    }
     /* Translate Y */
+
+    body[data-scroll-step="62"] .et_pb_columna_33 {
+        transform: translateY(131px);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="63"] .et_pb_columna_33 {
+        transform: translateY(131px);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="64"] .et_pb_columna_33 {
+        transform: translateY(131px);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="65"] .et_pb_columna_33 {
+        transform: translateY(131px);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="66"] .et_pb_columna_33 {
+        transform: translateY(131px);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="67"] .et_pb_columna_33 {
+        transform: translateY(131px);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="68"] .et_pb_columna_33 {
+        transform: translateY(131px);
+        transition: transform 200ms linear;
+    }
+    body[data-scroll-step="69"] .et_pb_columna_33 {
+        transform: translateY(131px);
+        transition: transform 200ms linear;
+    }
     body[data-scroll-step="70"] .et_pb_columna_33 {
         transform: translateY(131px);
         transition: transform 200ms linear;
@@ -2056,9 +2890,22 @@ body[data-scroll-step="69"] .image_transition_1_2 {
 }
 
 @media(max-width: 1100px){
+    #mision
+    {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    #alianzas
+    {
+        padding-top: 20px;
+    }
+    .et_pb_row{
+        padding: 4% 11% 6% 11%;
+    }
     .row_deslizante{
         height: 550px;
         margin-right: 0;
+        padding: 0;
     }
     .row_contador{
         padding: 1% 0 1% 0;
@@ -2073,12 +2920,17 @@ body[data-scroll-step="69"] .image_transition_1_2 {
     .et_pb_column {
         margin-bottom: 0px;
     }
+    footer
+    {
+        margin-top: 60px;
+    }
 }
 
 @media(max-width: 490px){
     .row_deslizante{
         height: 550px;
         margin-right: 0;
+        padding: 0;
     }
     .row_contador{
         padding: 1% 0 1% 0;
