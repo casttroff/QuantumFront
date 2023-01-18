@@ -8,17 +8,17 @@
 html,body
 {
     padding: 0px;
-    color: #000;
+    color: #121316;
     height:100%;
     width: 100%;
     margin: 0;
     font-family: 'Montserrat',Arial,sans-serif!important;
-    background: #000;
-    background-color: #000;
+    background: #121316;
+    background-color: #121316;
 }
 
 body.custom-background {
-    background-color: #000;
+    background-color: #121316;
 }
 
 a {
@@ -36,14 +36,15 @@ header
 {   
     position: fixed;
     height: 50px;
-    top: 0;
-    right: 0;
-    display: flex;
     width: 100%;
+    display: flex;
     box-shadow: 0 5px 25px rgba( 0, 0, 0, 0.05);
     z-index: 10009;
     transition: 1s;
-    background: transparent;
+    background: #1f2023cc;
+    backdrop-filter: blur(24px);
+    /* border-radius: 3.5rem;
+    margin: 0 6% 0 6% !important; */
 }
 
 .et_pb_number_counter_1.et_pb_number_counter {
@@ -72,7 +73,7 @@ header
 footer
 {
     position: relative;
-    background: #000;
+    background: #121316;
     z-index: 0;
 }
 
@@ -99,7 +100,7 @@ p
 
 .et_pb_section {
     padding: 0;
-    background-color: #000;
+    background-color: #121316;
     width: 100%;
 }
 
@@ -114,10 +115,25 @@ p
     z-index: 1000;
 }
 
+.cardbox
+{
+    border-radius: 1rem;
+    background: #ffffff08;
+    padding: 32px;
+    background-color: #ffffff08!important;
+}
+
+.cardbox2
+{
+    border-radius: 1rem;
+    background: #ffffff08;
+    padding: 32px;
+    margin-top: 16px;
+}
 
 #mision
 {
-    background-color: #000;
+    background-color: #121316;
     color: #fff;
 }
 
@@ -217,7 +233,7 @@ button.boton
 
 .boton
 {
-    background: #000;
+    background: #121316;
     border-radius: 7px;
     color: #fff;
     cursor: pointer;
@@ -304,6 +320,7 @@ button.boton
     transition: 0.66s;
     z-index: 99999;
     color: #fff;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -396,7 +413,6 @@ button.boton
     transition: 0.2s;
     background: transparent;
     overflow: hidden;
-    width: 0px;
 }
 #navbar.active
 {
@@ -476,7 +492,7 @@ iframe
     position: relative;
     width: 750px;
     height: 520px;
-    background-color: #000;
+    background-color: #121316;
     border-radius: 8px;
     overflow: hidden;
 
@@ -514,7 +530,7 @@ iframe
     position: relative;
     width: 750px;
     height: 520px;
-    background-color: #000;
+    background-color: #121316;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -573,7 +589,7 @@ input
 .inputBox
 {
     position: relative;
-    width: calc(100);
+    width: calc(100%);
     margin-top: 40px;
     border: none;
 }
@@ -639,7 +655,7 @@ input
 .inputBoxM
 {
     position: relative;
-    width: calc(100);
+    width: calc(100%);
     margin-top: 128px;
     border: none;
 }
@@ -722,9 +738,10 @@ input
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
-    background: #000;
+    background: #121316;
     z-index: 1;
 }
+
 
 .form h2
 {
@@ -777,7 +794,7 @@ input
         position: relative;
         width: 100%;
         height: 540px;
-        background-color: #000;
+        background-color: #121316;
         border-radius: 8px;
         overflow: hidden;
     }
@@ -812,7 +829,7 @@ input
         position: relative;
         width: 100%;
         height: 540px;
-        background-color: #000;
+        background-color: #121316;
         border-radius: 8px;
         overflow: hidden;
     }
@@ -851,18 +868,20 @@ input
     {
         position: fixed;
         flex-direction: column;
-        width: 100%;
-        top: 0px;
+        top: .75rem;
         padding: 0px;
         right: 0%;
         left: 0;
+        width: auto;
         justify-content: space-between;
-        height: 0px;
+        height: 50px;
         z-index: 100009;
+        border-radius: 3.5rem;
+        margin: 0 16px 0 16px;
+        backdrop-filter: blur(24px);
     }
     header ul
     {
-        margin-top: 10px;
         flex-wrap: wrap;
         justify-content: center;
         z-index: 10009;
@@ -904,28 +923,30 @@ input
     }
 
     #navbar {
-        /* padding: 90px; */
-        margin-top: 60px;
-        position: fixed;
         bottom: -100%;
-        right: 0;
-        width: 100%;
+        width: 160px;
         transition: 0.36s;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #000000;
+        background: #1f2023cc;
         z-index: 10002;
         transition: 0.2s;
         opacity: 0.91;
+        border-radius: 2em;
     }
     #navbar.active
     {
-        height: 100vh;
+        position: fixed;
+        height: 120px;
         bottom: 0;
-        width: 100%;
+        width: 160px;
         z-index: 10002;
         transition: 0.2s;
+        right: 0px;
+        right: 0;
+        top: 50px;
+        backdrop-filter: blur(24px);
     }
     #navbar ul
     {
@@ -2890,17 +2911,18 @@ body[data-scroll-step="69"] .image_transition_1{
 }
 
 @media(max-width: 1100px){
-    #mision
+    /* #mision
     {
         padding-top: 10%;
         padding-bottom: 10%;
-    }
+    } */
     #alianzas
     {
         padding-top: 20px;
+        margin: ;
     }
     .et_pb_row{
-        padding: 4% 11% 6% 11%;
+        padding: 32px 16px 32px 16px;
     }
     .row_deslizante{
         height: 550px;
@@ -2923,6 +2945,13 @@ body[data-scroll-step="69"] .image_transition_1{
     footer
     {
         margin-top: 60px;
+        background-color: #121316;
+        background: #121316;
+        
+    }
+    .row_footer {
+        padding: 32px 16px 32px 16px!important;
+        background: #121316;
     }
 }
 
